@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetRicci</title>
-    {% load static %}
 
     <!-- Icono -->
     <link rel="icon" href="favicon.ico">
@@ -27,10 +26,10 @@
     <script src="https://kit.fontawesome.com/49ff1d65a2.js" crossorigin="anonymous"></script>
 
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="{% static 'sitioVet/css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="main_page">
+<body>
 
     <!-- Barra Navegacion -->
     <nav class="navbar navbar-expand-lg">
@@ -74,60 +73,47 @@
         </div>
     </nav>
 
-    <!-- Carrusel de Servicios -->
-    <div id="main-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="consultas.html">
-                    <h1 class="carousel-title">Consultas Médicas</h1>
-                    <h3>Atiende a tu mascota con nuestro equipo de especialistas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/atencion.jpg' %}" alt="">
-                </a>
+    <div class="container-fluid consultas">
+        <h1>Sobre Nosotros</h1>
+        <div class="row filas-consulta">
+            <div class="col-md-6 consulta">
+                <h3><span>&#8226;</span> Nuestra Historia:</h3>
+                <div class="desc-consulta">
+                    <p>La primera Veterinaria de la familia Ricci surge en Italia en la década de los 80s,
+                        donde el padre del actual fundador empieza con una humilde consulta. Por temas
+                        económicos se tuvo que cerrar la veterinaria y la familia Ricci emigra a Chile en
+                        búsqueda de una segunda oportunidad, encontrandola en el negocio de alimentos.
+                        Sin embargo, Mario Ricci, hijo del original fundador, nunca perdió la esperanza de
+                        traer el rubro de la medicina en animales de vuelta a su familia. Es por eso
+                        que seis años después de haber egresado de la Universidad de Chile como médico veterinario,
+                        en el 2001, abre VetRicci.
+                    </p>
+                </div>
             </div>
-            <div class="carousel-item">
-                <a href="pelu.html">
-                    <h1 class="carousel-title">Peluquería</h1>
-                    <h3>Vas a quedar encantado con el nuevo look de tu regalón</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/peluqueria.png' %}" alt="">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="vacunacion.html">
-                    <h1 class="carousel-title">Vacunación</h1>
-                    <h3>Mantente al día con el programa de vacunas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/vacunas.jpg' %}" alt="">
-                </a>
+            <div class="col-md-6">
+                <img class="img-nosotros" src="img/antigua.jpg" alt="">
             </div>
         </div>
-        <button class="carousel-control-prev carousel-button " type="button" data-bs-target="#main-carousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-button carousel-control-next" type="button" data-bs-target="#main-carousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <div class="row filas-consulta">
+            <div class="col-md-6 consulta">
+                <h3><span>&#8226;</span> Nuestros Objetivos:</h3>
+                <div class="desc-consulta">
+                    <p>Nuestra principal meta es ayudar a todos los animales a los cuales sea posible, dando un servicio
+                        valioso para la comunidad. Vamos ampliando nuestros servicios y progresando en las tecnologías
+                        para dar una atención de calidad a un precio razonable. Como siguiente paso queremos crear una nueva sucursal en el sector
+                        norte de Santiago, algo que esta planificado para 2024.
 
-    <!-- Pie de pagina -->
-    <footer>
-        
-        <div id="w-cont" class="container-fluid">
-            <div class="row weather">
-                <div id="map" class="col-md-4 w-col">
-
-                </div>
-                <div id="ubicacion" class="col-md-4 w-col">
-
-                </div>
-                <div id="tiempo" class="col-md-4 w-col">
-
+                    </p>
                 </div>
             </div>
-        </div> 
+            <div class="col-md-6">
+                <img class="img-nosotros" src="img/objetivos.jpg" alt="">
+            </div>
+        </div>
+    </div>
 
+
+    <footer>
         <div class="icon-container">
             <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter fa-2x social-icon"></i></a>
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2x social-icon"></i></a>
@@ -139,11 +125,6 @@
         <p class="rights">© Copyright 2021 VetRicci</p>
     </footer>
 
-    
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{% static 'sitioVet/js/index.js' %}"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8jtfGDBpwvDx0idv1P1rGnj5xycsYwQE&callback=myMap"></script> 
 </body>
 
 </html>

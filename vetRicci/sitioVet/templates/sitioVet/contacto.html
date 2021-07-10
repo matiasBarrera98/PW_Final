@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetRicci</title>
-    {% load static %}
 
     <!-- Icono -->
     <link rel="icon" href="favicon.ico">
@@ -27,10 +26,10 @@
     <script src="https://kit.fontawesome.com/49ff1d65a2.js" crossorigin="anonymous"></script>
 
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="{% static 'sitioVet/css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="main_page">
+<body>
 
     <!-- Barra Navegacion -->
     <nav class="navbar navbar-expand-lg">
@@ -74,60 +73,89 @@
         </div>
     </nav>
 
-    <!-- Carrusel de Servicios -->
-    <div id="main-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="consultas.html">
-                    <h1 class="carousel-title">Consultas Médicas</h1>
-                    <h3>Atiende a tu mascota con nuestro equipo de especialistas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/atencion.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="pelu.html">
-                    <h1 class="carousel-title">Peluquería</h1>
-                    <h3>Vas a quedar encantado con el nuevo look de tu regalón</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/peluqueria.png' %}" alt="">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="vacunacion.html">
-                    <h1 class="carousel-title">Vacunación</h1>
-                    <h3>Mantente al día con el programa de vacunas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/vacunas.jpg' %}" alt="">
-                </a>
-            </div>
+    <!-- Formulario de Contacto -->
+    <div class="container-fluid form">
+        <div class="contact-title">
+            <h1>Contacto</h1>
+            <h4>Completa con tus datos, cuéntanos en que podemos ayudarte, y nos pondremos en contacto contigo
+                lo antes posible.
         </div>
-        <button class="carousel-control-prev carousel-button " type="button" data-bs-target="#main-carousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-button carousel-control-next" type="button" data-bs-target="#main-carousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        </h4>
+        <form method="GET" action="index.html" id="formulario">
+            <div class="row">
+                <div class="col-sm-4 col-lista">
+                    <select class="form-select form-select lista" aria-label=".form-select-sm example" id="tipo">
+                        <option selected>Tipo de Identificación</option>
+                        <option value="1">Rut</option>
+                        <option value="2">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="rut" name="rut" placeholder="Ingrese su rut">
+                        <label for="floatingInput" id="rut-label">Rut</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nombre" placeholder="name@example.com">
+                        <label for="floatingInput">Nombre</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="apellido" placeholder="name@example.com">
+                        <label for="floatingInput">Apellido</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="tel" minlength="9" maxlength="9" class="form-control" id="celular"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">Celular(Opcional)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="mail" placeholder="name@example.com">
+                        <label for="floatingInput">Mail</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="ciudad" placeholder="name@example.com">
+                        <label for="floatingInput">Ciudad de residencia</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="comentarios"
+                        style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comentarios (Opcional)</label>
+                </div>
+            </div>
+            <div class="row contact-buttons">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary btn-lg send" action="index.html">Enviar <i
+                            class="fas fa-paper-plane"></i></button><br>
+                </div>
+                <div class="col-sm-6">
+                    <button type="reset" class="btn btn-primary btn-lg clean" name="limpiar" id="limpiar"
+                        value="Limpiar">
+                        Limpiar</button>
+                </div>
+                <div id="error" class="alert alert-danger" role="alert"></div>
+
+            </div>
+        </form>
     </div>
 
-    <!-- Pie de pagina -->
     <footer>
-        
-        <div id="w-cont" class="container-fluid">
-            <div class="row weather">
-                <div id="map" class="col-md-4 w-col">
-
-                </div>
-                <div id="ubicacion" class="col-md-4 w-col">
-
-                </div>
-                <div id="tiempo" class="col-md-4 w-col">
-
-                </div>
-            </div>
-        </div> 
-
         <div class="icon-container">
             <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter fa-2x social-icon"></i></a>
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2x social-icon"></i></a>
@@ -139,11 +167,10 @@
         <p class="rights">© Copyright 2021 VetRicci</p>
     </footer>
 
-    
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{% static 'sitioVet/js/index.js' %}"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8jtfGDBpwvDx0idv1P1rGnj5xycsYwQE&callback=myMap"></script> 
+    <script src="validacion.js"></script>
+
 </body>
 
 </html>

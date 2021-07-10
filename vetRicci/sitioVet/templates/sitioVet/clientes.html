@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetRicci</title>
-    {% load static %}
 
     <!-- Icono -->
     <link rel="icon" href="favicon.ico">
@@ -27,10 +26,10 @@
     <script src="https://kit.fontawesome.com/49ff1d65a2.js" crossorigin="anonymous"></script>
 
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="{% static 'sitioVet/css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="main_page">
+<body>
 
     <!-- Barra Navegacion -->
     <nav class="navbar navbar-expand-lg">
@@ -74,60 +73,85 @@
         </div>
     </nav>
 
-    <!-- Carrusel de Servicios -->
-    <div id="main-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="consultas.html">
-                    <h1 class="carousel-title">Consultas Médicas</h1>
-                    <h3>Atiende a tu mascota con nuestro equipo de especialistas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/atencion.jpg' %}" alt="">
-                </a>
+    <!-- Galeria -->
+    <div class="container-fluid gallery">
+        <h1 class="gallery-title">Nuestra Fiel Clientela</h1>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (1).jpg" alt="">
+                <h3>Sonrisas</h3>
             </div>
-            <div class="carousel-item">
-                <a href="pelu.html">
-                    <h1 class="carousel-title">Peluquería</h1>
-                    <h3>Vas a quedar encantado con el nuevo look de tu regalón</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/peluqueria.png' %}" alt="">
-                </a>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (9).jpg" alt="">
+                <h3>Max</h3>
             </div>
-            <div class="carousel-item">
-                <a href="vacunacion.html">
-                    <h1 class="carousel-title">Vacunación</h1>
-                    <h3>Mantente al día con el programa de vacunas</h3>
-                    <img class="carousel-img" src="{% static 'sitioVet/img/vacunas.jpg' %}" alt="">
-                </a>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (2).jpg" alt="">
+                <h3>Frodo</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (8).jpg" alt="">
+                <h3>Otto</h3>
             </div>
         </div>
-        <button class="carousel-control-prev carousel-button " type="button" data-bs-target="#main-carousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-button carousel-control-next" type="button" data-bs-target="#main-carousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (3).jpg" alt="">
+                <h3>Caco</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (7).jpg" alt="">
+                <h3>Milo</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (4).jpg" alt="">
+                <h3>Dingo</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota (5).jpg" alt="">
+                <h3>Félix</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (1).jpg" alt="">
+                <h3>Vinni</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (7).jpg" alt="">
+                <h3>Gary</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (2).jpg" alt="">
+                <h3>Thor</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (8).jpg" alt="">
+                <h3>Hugo</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (3).jpg" alt="">
+                <h3>Garfield</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (6).jpg" alt="">
+                <h3>Kurt</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (5).jpg" alt="">
+                <h3>Vito</h3>
+            </div>
+            <div class="col-lg-3 col-sm-6 gallery-col ">
+                <img class="gallery-img" src="img/mascota1 (4).jpg" alt="">
+                <h3>Rocky</h3>
+            </div>
+        </div>
     </div>
 
-    <!-- Pie de pagina -->
+    <!-- Pie de Pagina -->
     <footer>
-        
-        <div id="w-cont" class="container-fluid">
-            <div class="row weather">
-                <div id="map" class="col-md-4 w-col">
-
-                </div>
-                <div id="ubicacion" class="col-md-4 w-col">
-
-                </div>
-                <div id="tiempo" class="col-md-4 w-col">
-
-                </div>
-            </div>
-        </div> 
-
         <div class="icon-container">
             <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter fa-2x social-icon"></i></a>
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2x social-icon"></i></a>
@@ -138,12 +162,6 @@
         <p class="rights">Dirección: Cardenal Newman 3294, Peñalolén</p>
         <p class="rights">© Copyright 2021 VetRicci</p>
     </footer>
-
-    
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{% static 'sitioVet/js/index.js' %}"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8jtfGDBpwvDx0idv1P1rGnj5xycsYwQE&callback=myMap"></script> 
 </body>
 
 </html>
