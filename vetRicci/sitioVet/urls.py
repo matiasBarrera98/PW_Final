@@ -5,4 +5,11 @@ from . import views
 
 urlpatterns = [
     path('', views.home ,name='home'), 
+    path('clientes/', views.clientes, name='clientes'),
+    path('nosotros/', views.nosotros, name='nosotros'),
+    path('consultas/', views.consultas, name='consultas'),
+    path('medicos/', views.medicos, name='medicos'),
+    path('peluqueria/', views.pelu, name='pelu'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('vacunacion/', views.vacunacion, name='vacunacion'),
 ]
