@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetRicci</title>
+    {% load static %}
 
     <!-- Icono -->
     <link rel="icon" href="favicon.ico">
@@ -26,7 +27,7 @@
     <script src="https://kit.fontawesome.com/49ff1d65a2.js" crossorigin="anonymous"></script>
 
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'sitioVet/css/style.css' %}">
 </head>
 
 <body>
@@ -91,7 +92,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-consulta" src="img/consulta (1).png" alt="">
+                <img class="img-consulta" src="{% static 'sitioVet/img/consulta (1).png' %}" alt="">
             </div>
         </div>
         <div class="row filas-consulta">
@@ -106,7 +107,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-consulta" src="img/consulta (2).jpg" alt="">
+                <img class="img-consulta" src="{% static 'sitioVet/img/consulta (2).jpg' %}" alt="">
             </div>
         </div>
         <div class="row filas-consulta">
@@ -122,7 +123,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img class="img-consulta" src="img/consulta (3).png" alt="">
+                <img class="img-consulta" src="{% static 'sitioVet/img/consulta (3).png' %}" alt="">
             </div>
         </div>
     </div>

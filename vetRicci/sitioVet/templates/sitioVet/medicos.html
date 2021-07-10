@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetRicci</title>
+    {% load static %}
 
     <!-- Icono -->
     <link rel="icon" href="favicon.ico">
@@ -26,7 +27,7 @@
     <script src="https://kit.fontawesome.com/49ff1d65a2.js" crossorigin="anonymous"></script>
 
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'sitioVet/css/style.css' %}">
 </head>
 
 <body>
@@ -79,7 +80,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (1).jpg" class="card-img-top" alt="...">
+                    <img src="{% sitioVet/img/doctor (1).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Mario Ricci</h5>
                         <p class="card-text">Nuestro Doctor especialista en cirugía canina es el fundador de la
@@ -91,7 +92,7 @@
             </div>
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (2).jpg" class="card-img-top" alt="...">
+                    <img src="{% sitioVet/img/doctor (2).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Enrique Kettlun</h5>
                         <p class="card-text">Enrique, nuestro médico veterinario con mas experiencia, es conocido por su
@@ -103,7 +104,7 @@
             </div>
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (3).jpg" class="card-img-top" alt="...">
+                    <img src="{% static 'sitioVet/img/doctor (3).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Norma Hidalgo</h5>
                         <p class="card-text">La querida Normita, dog-lover de corazón, es la encargada de oncología en
@@ -117,7 +118,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (4).jpg" class="card-img-top" alt="...">
+                    <img src="{% static 'sitioVet/img/doctor (4).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Isidora Correa</h5>
                         <p class="card-text">La doctora Isidora es la que está al mando de la toma de muestras y
@@ -130,7 +131,7 @@
             </div>
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (5).jpg" class="card-img-top" alt="...">
+                    <img src="{% static 'sitioVet/img/doctor (5).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Marcela Bravo</h5>
                         <p class="card-text">Nuetra doctora Marce es la encargada de la coordinacion del plan de vacunas
@@ -142,7 +143,7 @@
             </div>
             <div class="col-lg-4 col-md-6 doc-col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="img/doctor (6).jpg" class="card-img-top" alt="...">
+                    <img src="{% static 'sitioVet/img/doctor (6).jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Max Wilson</h5>
                         <p class="card-text">Max es el responsable del área de rehabilitación para nuestros queridos
