@@ -12,4 +12,4 @@ urlpatterns = [
     path('peluqueria/', views.pelu, name='pelu'),
     path('contacto/', views.contacto, name='contacto'),
     path('vacunacion/', views.vacunacion, name='vacunacion'),
-]
+    ]   
