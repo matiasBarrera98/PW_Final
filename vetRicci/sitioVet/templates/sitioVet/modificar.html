@@ -74,25 +74,22 @@
         </div>
     </nav>
 
-    <table class="table" id="mascotas">
-        <tr class="table-info">
-          <th>Id Mascota</th>
-          <th>Nombre Mascota</th>
-          <th>Telefono Dueño</th>
-          <th>Categoria</th>
-          <th>Opciones</th>
-        </tr>
+    <div class="container-fluid">
+        <h1>Modificar Mascota</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_table }}
+            </div>
+            <input type="submit" class="btn btn-info" value="Modificar">
+            <input type="reset" class="btn btn-secondary" value="Limpiar">
+            <a href="{% url 'mascotas' %}">Volver</a>
+        </form>
+        <div class="alert alert-success" role="alert">
+            {{mensaje}}
+        </div>
 
-        {% for mascota in mascotas %}        
-        <tr>
-          <td>{{mascota.idMascota}}</td>
-          <td>{{mascota.nombre}}</td>
-          <td>{{mascota.telefonoDuenio}}</td>
-          <td>{{mascota.idAnimal}}</td>
-          <td><a href="">Modificar</a>  <a href="">Eliminar</a></td>
-        </tr>
-        {% endfor %}
-      </table>
+    </div>
 
     <footer>
         <div class="icon-container">

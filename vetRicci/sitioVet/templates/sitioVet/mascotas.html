@@ -89,12 +89,14 @@
           <td>{{mascota.nombre}}</td>
           <td>{{mascota.telefonoDuenio}}</td>
           <td>{{mascota.idAnimal}}</td>
-          <td><a href="">Modificar</a>  <a href="{% url 'eliminar' mascota.idMascota %}">Eliminar</a></td>
+          <td><a href="{% url 'modificar' mascota.idMascota %}">Modificar</a>  <a href="{% url 'eliminar' mascota.idMascota %}">Eliminar</a></td>
         </tr>
         {% endfor %}
       </table>
 
-      <a href="{% url 'crearmascota' %}"><button class="btn btn-info">Ingresar nueva mascota</button></a>
+      <form action="{% url 'crear' %}" method="GET">
+          <input type="submit" class="btn btn-info" value="Ingresar Mascota">
+      </form>
 
     <footer>
         <div class="icon-container">

@@ -1,7 +1,8 @@
 from typing import ContextManager
 from django.shortcuts import render, redirect
-from .models import Animal, Mascota
+from .models import  Mascota
 from .forms import Agregamascota
+
 
 # Create your views here.
 
@@ -51,4 +52,17 @@ def eliminar(request, id):
     mascota = Mascota.objects.get(idMascota=id)
     mascota.delete()
     return redirect(to="mascotas")
+
+def modificar(request, id):
+    mascota = Mascota.objects.get(idMascota=id)
+    datos = {'form' : Agregamascota(instance=mascota)}
+    if request.method == 'POST':
+        formulario = Agregamascota(data=request.POST, instance=mascota)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = 'Mascota modificada'
+        else:
+            datos['mensaje'] = 'Error al modificar los datos'
+    return render(request, 'sitioVet/modificar.html', context=datos)
+
     
