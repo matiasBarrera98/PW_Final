@@ -314,4 +314,38 @@ footer{
     border-style: solid;
     text-align: center;
     margin: 3%;
+    width: 90%;
+}
+
+.btn-crear{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+ #mascotas a{
+    text-decoration: none;
+    color: black;
+}
+
+.registro{
+    text-align: center;
+}
+.registro h1, .crear h1{
+    color: #393e46;
+    margin-top: 3%;
+}
+
+.crear{
+    text-align: center;
+    margin: 3%;
+    padding: 0% 3%;
+}
+
+.crear input{
+    margin: 2%;
+}
+
+.crear a{
+    color: black;
+    font-weight: bold;
 }
