@@ -24,7 +24,7 @@ while True:
     elif opcion == 1:
         response = requests.get('http://127.0.0.1:8000/api/lista')
         for i in response.json():
-            print(i + '\n')
+            print(i)
     elif opcion == 2:
         datos = crear()
         response = requests.post('http://127.0.0.1:8000/api/lista/', data=datos)
