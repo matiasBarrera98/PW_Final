@@ -9,7 +9,7 @@
     {% load static %}
 
     <!-- Icono -->
-    <link rel="icon" href="{% static 'sitioVet/img/favicon.ico' %}">
+    <link rel="icon" href="favicon.ico">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -74,41 +74,20 @@
         </div>
     </nav>
 
-    <div class="container-fluid registro">
-    <h1>Registro de Mascotas</h1>
-    <table class="table" id="mascotas">
-        <tr class="table-info">
-          <th>Id Mascota</th>
-          <th>Nombre Mascota</th>
-          <th>Telefono Dueño</th>
-          <th>Categoria</th>
-          <th>Opciones</th>
-        </tr>
-
-        {% for mascota in mascotas %}        
-        <tr>
-          <td>{{mascota.idMascota}}</td>
-          <td>{{mascota.nombre}}</td>
-          <td>{{mascota.telefonoDuenio}}</td>
-          <td>{{mascota.idAnimal}}</td>
-          <td><a href="{% url 'modificar' mascota.idMascota %}">Modificar</a> -- <a href="{% url 'eliminar' mascota.idMascota %}">Eliminar</a></td>
-        </tr>
-        {% endfor %}
-      </table>
-
-      <div class="row botones-crear">
-        <div class="col btnmascotas">
-            <form action="{% url 'crear' %}" method="GET">
-                <input type="submit" class="btn btn-info" value="Ingresar Mascota">
-            </form>
-        </div>
-        <div class="col btncategoria">
-            <form action="{% url 'categoria' %}" method="GET">
-                <input type="submit" class="btn btn-secondary" value="Ingresar Categoria">
-            </form>
-        </div>
-      </div>
-        
+    <div class="container-fluid crear">
+        <h1>Crear Categoria</h1>
+        <form action="" method="POST" id="formulario">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.as_table}}
+            </div>
+            <input type="submit" class="btn btn-info" value="Crear">
+            <input type="reset" class="btn btn-secondary" value="Limpiar">
+            <a href="{% url 'mascotas' %}">Volver <i class="fas fa-undo-alt"></i></a>
+            <div class="alert alert-success" role="alert">
+                {{mensaje}}
+            </div>
+        </form>
     </div>
 
     <footer>

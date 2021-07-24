@@ -1,7 +1,7 @@
 from typing import ContextManager
 from django.shortcuts import render, redirect
 from .models import  Mascota
-from .forms import Agregamascota
+from .forms import Agregamascota, Agregacategoria
 
 
 # Create your views here.
@@ -64,5 +64,18 @@ def modificar(request, id):
         else:
             datos['mensaje'] = 'Error al modificar los datos'
     return render(request, 'sitioVet/modificar.html', context=datos)
+
+
+def categoria(request):
+    datos = {'form' : Agregacategoria()}
+    if request.method == 'POST':
+        formulario = Agregacategoria(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            datos ['mensaje'] = 'Categoría agregada correctamente'
+        else:
+            datos ['mensaje'] = 'Id ya asociado a una categoria'
+    return render(request, 'sitioVet/categoria.html', context=datos)
+
 
     
